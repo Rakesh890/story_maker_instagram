@@ -1,0 +1,72 @@
+[
+  {
+    "username": "Rakesh",
+    "stories": [
+      {
+        "title": "Big Buck Bunny",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "type": "video"
+      },
+      {
+        "title": "Elephant Dream",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "type": "video"
+      },
+      {
+        "url": "https://images.freeimages.com/images/large-previews/3b2/prague-conference-center-1056491.jpg",
+        "type": "image"
+      }
+    ]
+  },
+  {
+    "username": "Pushpender",
+    "stories": [
+      {
+        "url": "https://media.istockphoto.com/id/147282079/photo/the-spiral-staircase.jpg?s=1024x1024&w=is&k=20&c=WDLyILIi18nLfe1Ow0pjm1eChXlTNDc-xWCBF5VfIEk=",
+        "type": "image"
+      },
+      {
+        "url": "https://images.freeimages.com/images/large-previews/098/prague-1228647.jpg",
+        "type": "image"
+      }
+    ]
+  },
+  {
+    "username": "Virender",
+    "stories": [
+      {
+        "title": "For Bigger Blazes",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "type": "video"
+      },
+      {
+        "title": "For Bigger Escape",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "type": "video"
+      }
+    ]
+  },
+  {
+    "username": "Rajveer",
+    "stories": [
+      {
+        "url": "https://media.istockphoto.com/id/606191618/photo/prazski-astronomical-clock.jpg?s=1024x1024&w=is&k=20&c=b-YPvZ6JZEyPd4nEsQjNu5aLvfCMfo5TDlUlQvnNQ-c=",
+        "type": "Text"
+      },
+      {
+        "title": "For Bigger Fun",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        "type": "video"
+      },
+      {
+        "url": "https://media.istockphoto.com/id/1325578537/photo/happy-indian-mother-having-fun-with-her-daughter-outdoor-family-and-love-concept-focus-on-mum.jpg?s=1024x1024&w=is&k=20&c=X6ed13r_BH1qYAwUDRd9uxtZeS7RDJ5usjifJU9zp2Y=",
+        "type": "image"
+      },
+      {
+        "title": "For Bigger Joyrides",
+        "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+        "type": "video"
+      }
+    ]
+  }
+]
