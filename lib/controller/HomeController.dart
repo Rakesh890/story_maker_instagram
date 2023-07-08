@@ -80,7 +80,6 @@ class HomeController extends GetxController{
   }
 
   initVideoPlayer(String url) async {
-     try{
        vPlayerController = VideoPlayerController.networkUrl(Uri.parse(url));
        await vPlayerController.initialize();
        if(vPlayerController.value.isInitialized){
@@ -88,12 +87,34 @@ class HomeController extends GetxController{
        }else{
          isInitPlayer(false);
        }
-     }catch(er){
-        debugPrint(url);
-       vPlayerController = VideoPlayerController.networkUrl(Uri.parse(url))
-       ..initialize().then((value) => isInitPlayer.value = true)..play();
-     }
   }
+
+  loadStory(){
+      final storyItem = userStoryData[currentPage.value].stories![storiesIndex];
+      if (storyItem.type == "image") {
+        // _animController.duration = story.duration;
+        // _animController.forward();
+      }
+        else if(storyItem.type == "video"){
+        vPlayerController?.dispose();
+        vPlayerController = VideoPlayerController.networkUrl(Uri.parse(storyItem.url!))
+          ..initialize().then((_) {
+            debugPrint("init");
+            if (vPlayerController.value.isInitialized) {
+              setInitVideoPlayer(true);
+              vPlayerController.value.duration;
+              vPlayerController.play();
+              // _animController.forward();
+            }
+          });
+      }
+      }
+      // if (animateToPage) {
+      //   _pageController.animateToPage(
+      //     _currentIndex,
+      //     duration: const Duration(milliseconds: 1),
+      //     curve: Curves.easeInOut,
+      //   );
 
 
 

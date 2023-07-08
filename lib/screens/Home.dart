@@ -32,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
         currentPage = pageController.page!;
         homeController.storyItemIndex(0);
         homeController.currentPage(currentPage.toInt());
+        homeController.loadStory();
       });
     });
     homeController.loadData();
@@ -55,8 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     ..setEntry(3, 2, 0.001)
                     ..rotateY(degValue),
                   alignment: Alignment.centerRight,
-                  child: VideoPlayerWidget(),
-                  // StoryView(storyItems: storyItems,controller: homeController,)
+                  child: StoryView(storyItems: storyItems,controller: homeController,
+                  )
                 );
               }else if (currentPage.floor() + 1 == index) {
                 double value = currentPage - index;
@@ -67,10 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       ..setEntry(3, 2, 0.002)
                       ..rotateY(degValue),
                     alignment: Alignment.centerLeft,
-                    child:VideoPlayerWidget(),);
+                    child:StoryView(storyItems: storyItems,controller: homeController,
+                    ));
                     // StoryView(storyItems: storyItems, controller: homeController,));
               }
-              return VideoPlayerWidget();
+              return StoryView(storyItems: storyItems,controller: homeController,
+              );
                 // StoryView(storyItems: storyItems,controller: homeController,);
         }),
       ),

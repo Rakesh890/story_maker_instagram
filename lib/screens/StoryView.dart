@@ -30,17 +30,20 @@ class StoryView extends StatelessWidget {
                 final storyIndex = controller.storiesIndex;
                 final storiesItem = storyItems.stories![storyIndex];
                 if(storiesItem.type == "video")  {
-                  // return FutureBuilder(
-                  //   initialData: controller.initVideoPlayer(storiesItem.url!),
-                  //   builder: (context, snapshot){
-                  //   if(snapshot.hasData){
-                  //       return VideoPlayer(controller.videoPlayerController);
-                  //   }else {
-                  //     return const CircularProgressIndicator();
-                  //   }
-                  // },);
-
-                  return VideoPlayerWidget();
+                  return FutureBuilder(
+                    initialData: controller.initVideoPlayer(storiesItem.url!),
+                    builder: (context, snapshot){
+                    if(snapshot.hasData){
+                        return VideoPlayer(controller.videoPlayerController);
+                    }
+                    else if(snapshot.hasError){
+                      return const Center(child: Text("Error",
+                      style: TextStyle(color: Colors.white12),));
+                    }
+                    else {
+                      return const CircularProgressIndicator();
+                    }
+                  },);
                 }
                 else if(storiesItem.type == "image"){
                   return Image.network(storiesItem.url.toString());
@@ -53,7 +56,7 @@ class StoryView extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: ListTile(
-                title: Text(storyItems.username.toString(),style: TextStyle(color: Colors.white,fontSize: 18.0),),
+                title: Text(storyItems.username.toString(),style: const TextStyle(color: Colors.white,fontSize: 18.0),),
               ),
             )
           ]
